@@ -1,7 +1,49 @@
+import React, { useEffect } from "react";
 import "./Navbar.css";
 import logo from "../images/trans_logo_white.png";
 
 const Navbar = () => {
+  useEffect(() => {
+    const navToggle = document.getElementById("nav-toggle");
+    const navClose = document.getElementById("nav-close");
+    const navLink = document.querySelectorAll(".nav__link");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (navToggle) {
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.add("show-menu");
+      });
+    }
+
+    if (navClose) {
+      navClose.addEventListener("click", () => {
+        navMenu.classList.remove("show-menu");
+      });
+    }
+
+    const linkAction = () => {
+      navMenu.classList.remove("show-menu");
+    };
+
+    navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+    return () => {
+      if (navToggle) {
+        navToggle.removeEventListener("click", () => {
+          navMenu.classList.add("show-menu");
+        });
+      }
+
+      if (navClose) {
+        navClose.removeEventListener("click", () => {
+          navMenu.classList.remove("show-menu");
+        });
+      }
+
+      navLink.forEach((n) => n.removeEventListener("click", linkAction));
+    };
+  }, []);
+
   return (
     <header className="header" id="header">
       <nav className="nav container">
