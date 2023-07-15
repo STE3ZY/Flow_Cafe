@@ -6,7 +6,7 @@
   padding: 0;
   background-color: darkgrey;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1176px) {
   .cards__container {
     flex-direction: column;
   }
