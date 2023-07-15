@@ -1,0 +1,165 @@
+.d-none {
+  display: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  position: relative;
+  font-size: var(--h1-font-size);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.section__title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25%;
+  height: 4px;
+  background-color: var(--first-color);
+}
+
+.header {
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+  color: #fff;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  width: 8rem;
+}
+
+.nav__logo span {
+  color: var(--first-color);
+}
+
+.nav__toggle {
+  display: inline-flex;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+/* change header background */
+.scroll-header {
+  background-color: hsla(206, 12%, 12%, 0.9);
+  box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    background-color: var(--black-color);
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    z-index: 999;
+  }
+  .nav__logo {
+    width: 5rem;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 3rem;
+  padding-top: 9rem;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  color: var(--text-color-light);
+  font-size: var(--h2-font-size);
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.nav__link.active-link {
+  color: var(--first-color);
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__close {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+/* Show menu */
+.show-menu {
+  right: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .section {
+    padding: 7rem 0 2rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+
+  .nav__list {
+    padding-top: 0;
+    flex-direction: initial;
+    column-gap: 4rem;
+  }
+  .nav__link {
+    position: relative;
+    font-size: var(--normal-font-size);
+    text-transform: initial;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-inline: auto;
+  }
+}
