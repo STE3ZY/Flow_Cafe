@@ -189,11 +189,11 @@ button {
 }
 
 .nav__link.active-link {
-  color: #fff;
+  color: #5ce0e6;
 }
 
 .nav__link:hover {
-  color: #fff;
+  color: #5ce0e6;
 }
 
 .nav__close {
