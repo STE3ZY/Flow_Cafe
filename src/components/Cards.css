@@ -4,10 +4,14 @@
   justify-content: space-between;
   list-style: none;
   padding: 0;
+  background-color: darkgrey;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   .cards__container {
     flex-direction: column;
+  }
+  .card {
+    flex-basis: auto !important;
   }
 }
 .card {
@@ -25,6 +29,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 10px;
+  border-radius: 20px;
 }
 .card::before {
   content: "";
@@ -37,6 +43,7 @@
   opacity: 0; /* Start with transparent background */
   transition: opacity 0.3s ease;
   z-index: 1; /* Place the overlay above the text */
+  border-radius: 20px;
 }
 .card:hover::before {
   opacity: 0.7; /* Fade the overlay to black on hover */
@@ -49,7 +56,7 @@
   background-color: black; /* Change the background color to black on hover */
 }
 .card__title {
-  width: 400px;
+  width: 230px;
   position: absolute;
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0.5);

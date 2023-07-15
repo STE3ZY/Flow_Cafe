@@ -1,3 +1,4 @@
+import "./Navbar.css";
 import logo from "../images/trans_logo_white.png";
 
 const Navbar = () => {

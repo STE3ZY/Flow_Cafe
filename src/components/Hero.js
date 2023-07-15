@@ -1,3 +1,4 @@
+import "./Hero.css";
 import herobg from "../images/hero-bg.jpg";
 
 const Hero = () => {
@@ -6,7 +7,7 @@ const Hero = () => {
       className="hero section"
       id="home"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${herobg})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(${herobg})`,
       }}
     >
       <div className="hero__text">
