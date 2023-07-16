@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../images/trans_logo_white.png";
 
@@ -47,31 +48,31 @@ const Navbar = () => {
   return (
     <header className="header" id="header">
       <nav className="nav container">
-        <a href="#home" className="nav__logo">
+        <Link to="/" className="nav__logo">
           <img className="nav__logo" src={logo} alt="flow cafe logo" />
-        </a>
+        </Link>
 
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="#home" className="nav__link active-link">
+              <Link to="/" className="nav__link active-link">
                 ΑΡΧΙΚΗ
-              </a>
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#products" className="nav__link">
+              <Link to="/menu" className="nav__link">
                 ΜΕΝΟΥ
-              </a>
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#place" className="nav__link">
+              <Link to="/gallery" className="nav__link">
                 ΦΩΤΟΓΡΑΦΙΕΣ
-              </a>
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#blog" className="nav__link">
+              <Link to="/contact" className="nav__link">
                 ΕΠΙΚΟΙΝΩΝΙΑ
-              </a>
+              </Link>
             </li>
           </ul>
 
