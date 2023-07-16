@@ -1,0 +1,143 @@
+.gallery-wrapper {
+  width: 100%;
+  height: auto;
+  background-color: #282e34;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-wrapper {
+    margin-top: 56px;
+  }
+  .image-gallery {
+    padding: 1rem !important;
+  }
+}
+
+.image-gallery {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  grid-template-areas:
+    "img-1 img-1 img-1 img-1"
+    "img-2 img-2 img-2 img-2"
+    "img-3 img-3 img-3 img-3"
+    "img-4 img-4 img-4 img-4"
+    "img-5 img-5 img-5 img-5"
+    "img-6 img-6 img-6 img-6"
+    "img-7 img-7 img-7 img-7"
+    "img-8 img-8 img-8 img-8";
+}
+@media only screen and (min-width: 768px) {
+  .image-gallery {
+    grid-template-areas:
+      "img-1 img-1 img-2 img-2"
+      "img-3 img-3 img-4 img-4"
+      "img-5 img-5 img-6 img-6"
+      "img-7 img-7 img-8 img-8";
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .image-gallery {
+    grid-template-areas:
+      "img-1 img-2 img-3 img-3"
+      "img-1 img-4 img-5 img-6"
+      "img-7 img-7 img-8 img-6";
+  }
+}
+
+.image-gallery a {
+  width: 100%;
+  height: 25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.image-gallery a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #5cdfe68c;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.image-gallery a:hover,
+.image-gallery a:hover::before {
+  opacity: 1;
+}
+
+.image-gallery a i {
+  font-size: 3rem;
+  position: relative;
+  z-index: 100;
+  page-break-after: 1rem 3rem;
+  border: 2px solid #ffffffb4;
+  border-radius: 0.4rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.img-1 {
+  grid-area: img-1;
+  background-image: url("../images/image-5.jpg");
+  background-position: center;
+  background-size: contain;
+}
+@media only screen and (min-width: 1024px) {
+  .img-1 {
+    min-height: 51.5rem;
+  }
+}
+
+.img-2 {
+  grid-area: img-2;
+  background-image: url("../images/flow-esp.jpg");
+}
+
+.img-3 {
+  grid-area: img-3;
+  background-image: url("../images/flow-img3.jpg");
+}
+
+.img-4 {
+  grid-area: img-4;
+  background-image: url("../images/card2-bg.jpg");
+}
+
+.img-5 {
+  grid-area: img-5;
+  background-image: url("../images/flow-img5.jpg");
+}
+
+.img-6 {
+  grid-area: img-6;
+  background-image: url("../images/menu-coffee.jpg");
+}
+@media only screen and (min-width: 1024px) {
+  .img-6 {
+    min-height: 51.5rem;
+  }
+}
+
+.img-7 {
+  grid-area: img-7;
+  background-image: url("../images/flow-img2.jpg");
+}
+
+.img-8 {
+  grid-area: img-8;
+  background-image: url("../images/flow-img1.jpg");
+}
