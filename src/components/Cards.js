@@ -4,7 +4,10 @@ const Cards = () => {
   return (
     <ul className="cards__container">
       <li className="card1 card">
-        <h2 className="card__title">Ipanema Espresso</h2>
+        <h2 className="card__title">
+          <i className="bx bxs-coffee-bean symbol"></i>Ipanema Espresso
+          <i className="bx bxs-coffee-bean symbol"></i>
+        </h2>
         <p className="card__text">
           Η αδιαμφισβήτητη ανωτερότητα των γευστικών και αρωματικών του
           χαρακτηριστικών, η χαμηλή περιεκτικότητα σε καφεΐνη και οι ιδιαίτερα
@@ -14,7 +17,10 @@ const Cards = () => {
         </p>
       </li>
       <li className="card2 card">
-        <h2 className="card__title">Χειροποίητες Πίτες</h2>
+        <h2 className="card__title">
+          <i class="bx bxs-pizza symbol"></i>Χειροποίητες Πίτες
+          <i class="bx bxs-pizza symbol"></i>
+        </h2>
         <p className="card__text">
           Η πιο φρέσκια άφιξη που γεμίζει την πόλη με αρώματα και γεύσεις.
           Ξεκίνα το πρωινό σου με μια σπιτική πίτα ή μπαγκέτα και συνόδευσε τον
@@ -22,14 +28,20 @@ const Cards = () => {
         </p>
       </li>
       <li className="card4 card">
-        <h2 className="card__title">Κρύα Σάντουιτς</h2>
+        <h2 className="card__title">
+          <i class="bx bx-baguette symbol"></i>Κρύα Σάντουιτς
+          <i class="bx bx-baguette symbol"></i>
+        </h2>
         <p className="card__text">
           Απολαύστε καθημερινά μια μεγάλη ποικιλία από χορταστικά κρύα σάντουιτς
           σε παραδοσιακές και πρωτότυπες γεύσεις
         </p>
       </li>
       <li className="card3 card">
-        <h2 className="card__title">Χειροποίητα Γλυκά</h2>
+        <h2 className="card__title">
+          <i class="bx bx-cookie symbol"></i>Χειροποίητα Γλυκά
+          <i class="bx bx-cookie symbol"></i>
+        </h2>
         <p className="card__text">
           Το Flow cafe διαθέτει ποικιλία χειροποίητων γλυκών, φτιαγμένα με αγνά
           υλικά στο εργαστήριό μας. Απολαύστε τον καφέ σας σε συνδυασμό με ένα
