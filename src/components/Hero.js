@@ -1,5 +1,6 @@
 import "./Hero.css";
 import herobg from "../images/hero-bg.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -18,7 +19,11 @@ const Hero = () => {
           Espresso σε συνδυασμό με την τέλεια γεύση της σπιτικής πίτας και των
           υπολοίπων προϊόντων μας
         </p>
-        <button className="hero__button">ΠΑΡΤΕ ΜΙΑ ΓΕΥΣΗ</button>
+        {
+          <Link to="/menu" className="hero__button">
+            ΠΑΡΤΕ ΜΙΑ ΓΕΥΣΗ
+          </Link>
+        }
       </div>
     </section>
   );
