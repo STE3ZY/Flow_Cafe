@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../images/trans_logo_white.png";
 
 const Navbar = () => {
+  const [activeLink, setActiveLink] = useState("");
+  const location = useLocation();
+
   useEffect(() => {
     const navToggle = document.getElementById("nav-toggle");
     const navClose = document.getElementById("nav-close");
-    const navLink = document.querySelectorAll(".nav__link");
     const navMenu = document.getElementById("nav-menu");
 
     if (navToggle) {
@@ -22,12 +24,6 @@ const Navbar = () => {
       });
     }
 
-    const linkAction = () => {
-      navMenu.classList.remove("show-menu");
-    };
-
-    navLink.forEach((n) => n.addEventListener("click", linkAction));
-
     return () => {
       if (navToggle) {
         navToggle.removeEventListener("click", () => {
@@ -40,10 +36,19 @@ const Navbar = () => {
           navMenu.classList.remove("show-menu");
         });
       }
-
-      navLink.forEach((n) => n.removeEventListener("click", linkAction));
     };
   }, []);
+
+  useEffect(() => {
+    const navLinks = document.querySelectorAll(".nav__link");
+
+    navLinks.forEach((navLink) => {
+      const linkPath = navLink.getAttribute("href");
+      if (linkPath === location.pathname) {
+        setActiveLink(linkPath);
+      }
+    });
+  }, [location.pathname]);
 
   return (
     <header className="header" id="header">
@@ -55,22 +60,42 @@ const Navbar = () => {
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
             <li className="nav__item">
-              <Link to="/" className="nav__link active-link">
+              <Link
+                to="/"
+                className={`nav__link ${
+                  activeLink === "/" ? "active-link" : ""
+                }`}
+              >
                 ΑΡΧΙΚΗ
               </Link>
             </li>
             <li className="nav__item">
-              <Link to="/menu" className="nav__link">
+              <Link
+                to="/menu"
+                className={`nav__link ${
+                  activeLink === "/menu" ? "active-link" : ""
+                }`}
+              >
                 ΜΕΝΟΥ
               </Link>
             </li>
             <li className="nav__item">
-              <Link to="/gallery" className="nav__link">
+              <Link
+                to="/gallery"
+                className={`nav__link ${
+                  activeLink === "/gallery" ? "active-link" : ""
+                }`}
+              >
                 ΦΩΤΟΓΡΑΦΙΕΣ
               </Link>
             </li>
             <li className="nav__item">
-              <Link to="/contact" className="nav__link">
+              <Link
+                to="/contact"
+                className={`nav__link ${
+                  activeLink === "/contact" ? "active-link" : ""
+                }`}
+              >
                 ΕΠΙΚΟΙΝΩΝΙΑ
               </Link>
             </li>

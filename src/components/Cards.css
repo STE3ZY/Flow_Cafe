@@ -56,6 +56,9 @@
   background-color: black; /* Change the background color to black on hover */
 }
 .card__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 230px;
   position: absolute;
   font-weight: 400;
@@ -64,6 +67,9 @@
   top: 50%; /* Move the element 50% down from the top */
   left: 50%; /* Move the element 50% from the left */
   transform: translate(-50%, -50%);
+}
+.symbol {
+  margin: 0 10px;
 }
 
 .card__text {
