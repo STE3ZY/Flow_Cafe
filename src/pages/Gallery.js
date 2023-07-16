@@ -1,16 +1,8 @@
 import React from "react";
-import Hero from "../components/Hero";
-import Cards from "../components/Cards";
-import Footer from "../components/Footer";
+import Photos from "../components/Photos";
 
 const Gallery = () => {
-  return (
-    <div>
-      <Hero />
-      <Cards />
-      <Footer />
-    </div>
-  );
+  return <Photos />;
 };
 
 export default Gallery;
