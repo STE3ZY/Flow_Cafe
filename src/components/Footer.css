@@ -11,6 +11,7 @@
 }
 
 .footer__title {
+  width: 200px;
   text-align: center;
   color: #fff;
   font-size: var(--biggest-font-size);
@@ -18,7 +19,20 @@
 }
 
 .footer__data {
+  display: flex;
+  justify-content: space-evenly;
   padding-bottom: 1rem;
+}
+
+.footer__item {
+  font-size: large;
+  text-align: center;
+  margin: 0 2rem;
+}
+.footer__item i {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .footer__subtitle {
@@ -85,8 +99,11 @@ iframe {
 }
 
 @media screen and (max-width: 968px) {
-  .footer__content {
+  .footer__data {
     flex-direction: column;
     align-items: center;
+  }
+  .footer__item {
+    margin-bottom: 1rem;
   }
 }
