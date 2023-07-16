@@ -1,37 +1,7 @@
-.d-none {
-  display: none;
-}
-
 .container {
   max-width: 1024px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.section {
-  padding: 4.5rem 0 2rem;
-}
-
-.section__title {
-  position: relative;
-  font-size: var(--h1-font-size);
-  margin-bottom: 2.5rem;
-  font-weight: 700;
-}
-
-.section__title::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 25%;
-  height: 4px;
-  background-color: var(--first-color);
 }
 
 .header {
@@ -69,12 +39,6 @@
   display: inline-flex;
   font-size: 1.15rem;
   cursor: pointer;
-}
-
-/* change header background */
-.scroll-header {
-  background-color: hsla(206, 12%, 12%, 0.9);
-  box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
 }
 
 @media screen and (max-width: 768px) {
