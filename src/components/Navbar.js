@@ -12,6 +12,10 @@ const Navbar = () => {
     const navClose = document.getElementById("nav-close");
     const navMenu = document.getElementById("nav-menu");
 
+    const closeMenu = () => {
+      navMenu.classList.remove("show-menu");
+    };
+
     if (navToggle) {
       navToggle.addEventListener("click", () => {
         navMenu.classList.add("show-menu");
@@ -19,10 +23,13 @@ const Navbar = () => {
     }
 
     if (navClose) {
-      navClose.addEventListener("click", () => {
-        navMenu.classList.remove("show-menu");
-      });
+      navClose.addEventListener("click", closeMenu);
     }
+
+    const navLinks = document.querySelectorAll(".nav__link");
+    navLinks.forEach((navLink) => {
+      navLink.addEventListener("click", closeMenu);
+    });
 
     return () => {
       if (navToggle) {
@@ -32,10 +39,12 @@ const Navbar = () => {
       }
 
       if (navClose) {
-        navClose.removeEventListener("click", () => {
-          navMenu.classList.remove("show-menu");
-        });
+        navClose.removeEventListener("click", closeMenu);
       }
+
+      navLinks.forEach((navLink) => {
+        navLink.removeEventListener("click", closeMenu);
+      });
     };
   }, []);
 
