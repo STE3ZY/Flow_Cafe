@@ -8,6 +8,11 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Scroll to top when route changes
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  useEffect(() => {
     const navToggle = document.getElementById("nav-toggle");
     const navClose = document.getElementById("nav-close");
     const navMenu = document.getElementById("nav-menu");
