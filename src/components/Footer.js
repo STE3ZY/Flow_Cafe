@@ -1,5 +1,9 @@
 import "./Footer.css";
 import footerLogo from "../images/footer-logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -15,21 +19,30 @@ const Footer = () => {
         <div className="footer__content">
           <div className="footer__data">
             <div className="footer__item">
-              <i
-                className="bx bxs-location-plus"
+              <FontAwesomeIcon
+                className="font-awesome"
+                icon={faLocationPin}
                 style={{ color: "#ffffff" }}
-              ></i>
+              />
               <p className="footer__information">
                 Πίνδου 55 | 42200 <br />
                 Καλαμπάκα
               </p>
             </div>
             <div className="footer__item">
-              <i className="bx bxs-phone" style={{ color: "#ffffff" }}></i>
+              <FontAwesomeIcon
+                className="font-awesome"
+                icon={faPhone}
+                style={{ color: "#ffffff" }}
+              />{" "}
               <p className="footer__information">24320 23450</p>
             </div>
             <div className="footer__item">
-              <i class="bx bxs-envelope" style={{ color: "#ffffff" }}></i>
+              <FontAwesomeIcon
+                className="font-awesome"
+                icon={faEnvelope}
+                style={{ color: "#ffffff" }}
+              />{" "}
               <p className="footer__information">flowcafegr@gmail.com</p>
             </div>
           </div>
