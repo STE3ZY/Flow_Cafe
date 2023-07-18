@@ -20,8 +20,8 @@ const Cards = () => {
         </li>
         <li className="card2 card">
           <h2 className="card__title">
-            <i class="bx bxs-pizza symbol"></i>Χειροποίητες Πίτες
-            <i class="bx bxs-pizza symbol"></i>
+            <i className="bx bxs-pizza symbol"></i>Χειροποίητες Πίτες
+            <i className="bx bxs-pizza symbol"></i>
           </h2>
           <p className="card__text">
             Η πιο φρέσκια άφιξη που γεμίζει την πόλη με αρώματα και γεύσεις.
@@ -31,8 +31,8 @@ const Cards = () => {
         </li>
         <li className="card4 card">
           <h2 className="card__title">
-            <i class="bx bx-baguette symbol"></i>Κρύα Σάντουιτς
-            <i class="bx bx-baguette symbol"></i>
+            <i className="bx bx-baguette symbol"></i>Κρύα Σάντουιτς
+            <i className="bx bx-baguette symbol"></i>
           </h2>
           <p className="card__text">
             Απολαύστε καθημερινά μια μεγάλη ποικιλία από χορταστικά κρύα
@@ -41,8 +41,8 @@ const Cards = () => {
         </li>
         <li className="card3 card">
           <h2 className="card__title">
-            <i class="bx bx-cookie symbol"></i>Χειροποίητα Γλυκά
-            <i class="bx bx-cookie symbol"></i>
+            <i className="bx bx-cookie symbol"></i>Χειροποίητα Γλυκά
+            <i className="bx bx-cookie symbol"></i>
           </h2>
           <p className="card__text">
             Το Flow cafe διαθέτει ποικιλία χειροποίητων γλυκών, φτιαγμένα με
