@@ -1,10 +1,10 @@
 import { JackInTheBox } from "react-awesome-reveal";
 
 import "./Flyer.css";
-import page1 from "../images/menu1.png";
-import page2 from "../images/menu2.png";
-import page3 from "../images/menu3.png";
-import page4 from "../images/menu4.png";
+import page1 from "../images/menu1.jpg";
+import page2 from "../images/menu2.jpg";
+import page3 from "../images/menu3.jpg";
+import page4 from "../images/menu4.jpg";
 
 const Flyer = () => {
   return (

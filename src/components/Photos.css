@@ -1,7 +1,7 @@
 .gallery-wrapper {
   width: 100%;
   height: auto;
-  background-color: #282e34;
+  background-image: url(../images/gallery-bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
