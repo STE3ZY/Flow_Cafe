@@ -68,6 +68,12 @@ const Footer = () => {
             </a>
           </ul>
         </div>
+        <div className="watermark">
+          <p>
+            Website built and maintained by
+            <a href="https://ikaradimos.com/"> Ioannis Karadimos</a>
+          </p>
+        </div>
       </div>
     </footer>
   );
