@@ -99,6 +99,14 @@ iframe {
   font-size: var(--small-font-size);
 }
 
+.watermark {
+  padding-bottom: 10px;
+}
+
+.watermark p {
+  opacity: 75%;
+}
+
 @media screen and (max-width: 968px) {
   .footer__data {
     flex-direction: column;
